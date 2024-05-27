@@ -10,11 +10,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Loader from "./Loader";
+import ErrorComponent from "./ErrorComponent";
 
 const Exchanges = () => {
   const [exchanges, setExchanges] = useState([]);
   const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchExchanges = async () => {
@@ -30,6 +31,9 @@ const Exchanges = () => {
     fetchExchanges();
   }, []);
 
+  if (error)
+    return <ErrorComponent message={"Error While Fetching Exchanges"} />;
+
   return (
     <Container maxW={"container.xl"}>
       {loading ? (
@@ -43,7 +47,9 @@ const Exchanges = () => {
                 name={i.name}
                 img={i.image}
                 rank={i.trust_score_rank}
-                url={i.url}
+                    url={i.url}
+                    year={i.year_established}
+                    // desc={i.description}
               />
             ))}
           </HStack>
@@ -53,10 +59,11 @@ const Exchanges = () => {
   );
 };
 
-const ExchangeCard = ({ name, img, rank, url }) => (
-  <a href={url} target={"blank"}>
+const ExchangeCard = ({ name, img, rank, url ,year}) => (
+  <a href={url} target={"_blank"}>
     <VStack
-      w={"52"}
+            w={"52"}
+            h={"52"}
       shadow={"lg"}
       p={"8"}
       borderRadius={"lg"}
@@ -76,10 +83,16 @@ const ExchangeCard = ({ name, img, rank, url }) => (
         alt={"Exchange"}
       />
       <Heading size={"md"} noOfLines={1}>
-        {rank}
-      </Heading>
+       Rank : {rank}
+            </Heading>
+      {/* <Heading size={"md"} >
+        {desc}
+            </Heading> */}
+            
+            
 
-      <Text noOfLines={1}>{name}</Text>
+            <Text p={ "2"} noOfLines={1}>{name}</Text>
+            <Text>Es.Year : {year ? `${year}`: "NA"}</Text>
     </VStack>
   </a>
 );

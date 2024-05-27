@@ -3,7 +3,7 @@ import axios from "axios";
 import { server } from "../index";
 import { Button, Container, HStack, Radio, RadioGroup } from "@chakra-ui/react";
 import Loader from "../components/Loader";
-// import ErrorComponent from "./ErrorComponent";
+ import ErrorComponent from "./ErrorComponent";
 import CoinCard from "./CoinCard";
 
 const Coins = () => {
@@ -39,7 +39,7 @@ const Coins = () => {
     fetchCoins();
   }, [currency, page]);
 
-  // if (error) return <ErrorComponent message={"Error While Fetching Coins"} />;
+  if (error) return <ErrorComponent message={"Error While Fetching Coins"} />;
 
   return (
     <Container maxW={"container.xl"}>
@@ -64,7 +64,8 @@ const Coins = () => {
                 price={i.current_price}
                 img={i.image}
                 symbol={i.symbol}
-                currencySymbol={currencySymbol}
+                    currencySymbol={currencySymbol}
+                    rank={i.market_cap_rank}
               />
             ))}
           </HStack>
