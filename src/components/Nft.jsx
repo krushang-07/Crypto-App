@@ -13,7 +13,7 @@ const Nft = () => {
   useEffect(() => {
     const fetchNFT = async () => {
       try {
-        const { data } = await axios.get(`${server}/nfts/list`);
+        const { data } = await axios.get(`${server}nfts/list`);
         setNfts(data);
         setLoading(false);
       } catch (error) {
@@ -38,7 +38,7 @@ const Nft = () => {
                 key={i.id}
                 name={i.name}
                 symbol={i.symbol}
-                assets={i.asset_platform_id}
+                Assets={i.asset_platform_id}
                 // desc={i.description}
               />
             ))}
@@ -49,7 +49,7 @@ const Nft = () => {
   );
 };
 
-const NftCard = ({ name, symbol, assets }) => (
+const NftCard = ({ name, symbol, Assets }) => (
   <VStack
     w={"52"}
     h={"52"}
@@ -69,7 +69,7 @@ const NftCard = ({ name, symbol, assets }) => (
     <Text p={"7"} noOfLines={1}>
       {name}
     </Text>
-    <Text noOfLines={1}>assets : {assets}</Text>
+    <Text noOfLines={1}>assets : {Assets}</Text>
   </VStack>
 );
 
