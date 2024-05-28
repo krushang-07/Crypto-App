@@ -35,13 +35,13 @@ const Exchanges = () => {
     return <ErrorComponent message={"Error While Fetching Exchanges"} />;
 
   return (
-    <Container w={"full"} h={"full"} bgColor={"yellow.500"}>
+    <Container maxW={"container.xl"}>
       {loading ? (
         <Loader />
       ) : (
         <>
           <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
-            <Heading color={"blue.500"} p={"10"}>
+            <Heading color={"yellow.700"} p={"10"}>
               Coin Exchange Platform
             </Heading>
             {exchanges.map((i) => (

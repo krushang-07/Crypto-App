@@ -9,11 +9,11 @@ const Header = () => {
     <HStack
       p={"4"}
       shadow={"base"}
-      bgColor={"blackAlpha.900"}
+      bgColor={"yellow.500"}
       display={"flex"}
       alignItems={"center"}
     >
-      <Text p={"4"} justifyContent={"flex-start"} fontSize={"x-large"} color={"yellow.700"}>
+      <Text p={"4"} justifyContent={"flex-start"} fontSize={"x-large"} color={"yellow.900"}>
         CryptoHub
       </Text>
 

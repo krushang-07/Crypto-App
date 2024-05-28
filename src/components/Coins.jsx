@@ -313,7 +313,7 @@ const Coins = () => {
   return (
     <Container maxW={"container.xl"} py={4} justifyContent={"space-evenly"}>
       <VStack spacing={4} mb={8}>
-        <Heading color={"blue.500"} p={"3"}>Here All Crypto-Coin</Heading>
+        <Heading color={"yellow.700"} p={"3"}>Here All Crypto-Coin</Heading>
         <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
           <HStack spacing={"4"}>
             <Radio value={"inr"}>INR</Radio>
@@ -360,7 +360,7 @@ const Coins = () => {
             {btns.map((item, index) => (
               <Button
                 key={index}
-                bgColor={"blue.900"}
+                bgColor={"yellow.600"}
                 rounded={"md"}
                 color={"white"}
                 onClick={() => changePage(index + 1)}
