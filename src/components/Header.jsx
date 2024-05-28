@@ -13,7 +13,7 @@ const Header = () => {
       display={"flex"}
       alignItems={"center"}
     >
-      <Text p={"4"} justifyContent={"flex-start"} fontSize={"x-large"} color={"blue.300"}>
+      <Text p={"4"} justifyContent={"flex-start"} fontSize={"x-large"} color={"yellow.700"}>
         CryptoHub
       </Text>
 

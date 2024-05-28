@@ -264,7 +264,7 @@ const Coins = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [currency, setCurrency] = useState("usd");
+  const [currency, setCurrency] = useState("inr");
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const coinsPerPage = 50;

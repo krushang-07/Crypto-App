@@ -35,7 +35,7 @@ const Exchanges = () => {
     return <ErrorComponent message={"Error While Fetching Exchanges"} />;
 
   return (
-    <Container maxW={"container.xl"}>
+    <Container w={"full"} h={"full"} bgColor={"yellow.500"}>
       {loading ? (
         <Loader />
       ) : (
