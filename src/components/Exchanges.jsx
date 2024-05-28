@@ -41,15 +41,18 @@ const Exchanges = () => {
       ) : (
         <>
           <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+            <Heading color={"blue.500"} p={"10"}>
+              Coin Exchange Platform
+            </Heading>
             {exchanges.map((i) => (
               <ExchangeCard
                 key={i.id}
                 name={i.name}
                 img={i.image}
                 rank={i.trust_score_rank}
-                    url={i.url}
-                    year={i.year_established}
-                    // desc={i.description}
+                url={i.url}
+                year={i.year_established}
+                // desc={i.description}
               />
             ))}
           </HStack>
@@ -59,11 +62,11 @@ const Exchanges = () => {
   );
 };
 
-const ExchangeCard = ({ name, img, rank, url ,year}) => (
-  <a href={url} target={"_blank"}>
+const ExchangeCard = ({ name, img, rank, url, year }) => (
+  <a href={url} target={"blank"}>
     <VStack
-            w={"52"}
-            h={"52"}
+      w={"52"}
+      h={"52"}
       shadow={"lg"}
       p={"8"}
       borderRadius={"lg"}
@@ -83,16 +86,12 @@ const ExchangeCard = ({ name, img, rank, url ,year}) => (
         alt={"Exchange"}
       />
       <Heading size={"md"} noOfLines={1}>
-       Rank : {rank}
-            </Heading>
-      {/* <Heading size={"md"} >
-        {desc}
-            </Heading> */}
-            
-            
-
-            <Text p={ "2"} noOfLines={1}>{name}</Text>
-            <Text>Es.Year : {year ? `${year}`: "NA"}</Text>
+        Rank : {rank}
+      </Heading>
+      <Text p={"2"} noOfLines={1}>
+        {name}
+      </Text>
+      <Text>Es.Year : {year ? `${year}` : "NA"}</Text>
     </VStack>
   </a>
 );

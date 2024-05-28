@@ -32,7 +32,8 @@ const Nft = () => {
         <Loader />
       ) : (
         <>
-          <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+            <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+            <Heading p={"20"} color={"blue.500"}>NFT's</Heading>
             {nfts.map((i) => (
               <NftCard
                 key={i.id}
