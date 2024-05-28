@@ -1,3 +1,5 @@
+
+
 import { useEffect } from "react";
 import { Box, Button, Progress } from "@chakra-ui/react";
 import { Container } from "@chakra-ui/react";
@@ -39,52 +41,14 @@ const CoinDetails = () => {
   const btns = ["24h", "7d", "14d", "30d", "60d", "200d", "1y", "max"];
 
   const switchChartStats = (key) => {
-    switch (key) {
-      case "24h":
-        setDays("24h");
-        setLoading(true);
-        break;
-      case "7d":
-        setDays("7d");
-        setLoading(true);
-        break;
-      case "14d":
-        setDays("14d");
-        setLoading(true);
-        break;
-      case "30d":
-        setDays("30d");
-        setLoading(true);
-        break;
-      case "60d":
-        setDays("60d");
-        setLoading(true);
-        break;
-      case "200d":
-        setDays("200d");
-        setLoading(true);
-        break;
-      case "1y":
-        setDays("365d");
-        setLoading(true);
-        break;
-      case "max":
-        setDays("max");
-        setLoading(true);
-        break;
-
-      default:
-        setDays("24h");
-        setLoading(true);
-        break;
-    }
+    setDays(key);
+    setLoading(true);
   };
 
   useEffect(() => {
     const fetchCoin = async () => {
       try {
         const { data } = await axios.get(`${server}/coins/${params.id}`);
-
         const { data: chartData } = await axios.get(
           `${server}/coins/${params.id}/market_chart?vs_currency=${currency}&days=${days}`
         );
@@ -100,6 +64,7 @@ const CoinDetails = () => {
   }, [params.id, days, currency]);
 
   if (error) return <ErrorComponent message={"Error While Fetching Coin"} />;
+  
   return (
     <Container maxW={"container.xl"}>
       {loading ? (
@@ -108,40 +73,65 @@ const CoinDetails = () => {
         <>
           <Box width={"full"} borderWidth={1}>
             <Chart arr={chartArray} currency={currencySymbol} days={days} />
-            </Box>
-            <HStack p="4" overflowX={"auto"}>
+          </Box>
+          <HStack p="4" overflowX={"auto"}>
             {btns.map((i) => (
               <Button
-                disabled={days === i}
                 key={i}
                 onClick={() => switchChartStats(i)}
+                _hover={{
+                  backgroundColor: "yellow.500",
+                  color: "white",
+                }}
               >
                 {i}
               </Button>
             ))}
           </HStack>
 
-
-          <RadioGroup value={currency} onChange={setCurrency} p={"8"}  alignSelf="center">
-            <HStack spacing={"4"} alignSelf="center">
-              <Radio value={"inr"}>INR</Radio>
-              <Radio value={"usd"}>USD</Radio>
-              <Radio value={"eur"}>EUR</Radio>
+          <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
+            <HStack spacing={"4"}>
+              <Radio
+                value={"inr"}
+                _checked={{
+                  bgColor: "yellow.400",
+                  color: "white",
+                }}
+              >
+                INR
+              </Radio>
+              <Radio
+                value={"usd"}
+                _checked={{
+                  bgColor: "yellow.400",
+                  color: "white",
+                }}
+              >
+                USD
+              </Radio>
+              <Radio
+                value={"eur"}
+                _checked={{
+                  bgColor: "yellow.400",
+                  color: "white",
+                }}
+              >
+                EUR
+              </Radio>
             </HStack>
           </RadioGroup>
-          <VStack spacing={"4"} p="16" alignItems={"flex-start"}>
-            <Text fontSize={"small"} alignSelf="center" opacity={0.7}>
+
+          <VStack spacing={"4"} p="16" alignItems={"center"}>
+            <Text fontSize={"small"} opacity={0.7} fontSize={"x-large"}>
               Last Updated On{" "}
               {Date(coin.market_data.last_updated).split("G")[0]}
             </Text>
 
             <Image
               src={coin.image.large}
-              w={"20"}
-              h={"20"}
+              w={"40"}
+              h={"40"}
               objectFit={"contain"}
-              justifyContent={"center"}
-              alignItems={"center"}
             />
 
             <Stat>
@@ -222,3 +212,5 @@ const CustomBar = ({ high, low }) => (
     </HStack>
   </VStack>
 );
+
+
