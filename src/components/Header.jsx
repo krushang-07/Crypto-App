@@ -1,9 +1,10 @@
-import { Button, HStack } from "@chakra-ui/react";
+import { Button, HStack, Image } from "@chakra-ui/react";
 //import { color } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Text } from "@chakra-ui/react";
 
+import btcSrc from "../assets/btc.png"
 const Header = () => {
   return (
     <HStack
@@ -13,26 +14,33 @@ const Header = () => {
       display={"flex"}
       alignItems={"center"}
     >
-      <Text p={"4"} justifyContent={"flex-start"} fontSize={"x-large"} color={"yellow.900"}>
+      <Text p={"2"} justifyContent={"flex-start"} fontSize={"xx-large"} color={"yellow.900"}>
         CryptoHub
       </Text>
+      <Image
+        w={"10"}
+        h={"10"}
+        objectFit={"contain"}
+        src={btcSrc}
+        />
 
       <Button
         variant={"unstyled"}
         color={"white"}
-        p={"2"}
+        p={"1"}
         m={"3"}
-        justifyContent={""}
+        justifyContent={"flex-end"}
+        fontSize={"x-large"}
       >
         <Link to="/">Home</Link>
       </Button>
-      <Button variant={"unstyled"} color={"white"} p={"2"} m={"3"}>
+      <Button variant={"unstyled"} color={"white"} p={"1"} m={"3"} fontSize={"x-large"}>
         <Link to="/exchanges">Exchange</Link>
       </Button>
-      <Button variant={"unstyled"} color={"white"} p={"2"} m={"3"}>
+      <Button variant={"unstyled"} color={"white"} p={"1"} m={"3"} fontSize={"x-large"}>
         <Link to="/coins">Coins</Link>
       </Button>
-      <Button variant={"unstyled"} color={"white"} p={"2"} m={"3"}>
+      <Button variant={"unstyled"} color={"white"} p={"1"} m={"3"} fontSize={"x-large"}>
         <Link to="/nft">NFT</Link>
       </Button>
     </HStack>

@@ -45,19 +45,21 @@ const Footer = () => {
         <VStack>
           <Avatar boxSize={"28"} mt={["4", "0"]} src={avatarSrc} />
           <Text>Our Founder</Text>
-        </VStack>
-
-        <HStack spacing={4}>
           <Link href="https://opensea.io/Art0n_nft" isExternal>
-            <Text p={"2"} fontSize={"small"}> My NFT's</Text>
+            <Text p={"2"} fontSize={"md"}> My NFT's</Text>
             <IconButton
               aria-label="LinkedIn"
               icon={<ViewIcon />}
               size={"lg"}
               variant={"ghost"}
-              colorScheme={"whiteAlpha"}
+              colorScheme={"whiteAlpha"
+              }
             />
           </Link>
+        </VStack>
+
+        <HStack spacing={4}>
+        
           <Link
             href="https://www.linkedin.com/in/krushang-savaliya-497668242"
             isExternal
