@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# CryptoHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CryptoHub is a comprehensive platform that provides detailed information about cryptocurrency exchanges, various cryptocurrencies, and NFTs. Built using ReactJS, this project utilizes HTML,Chakra-UI for design, and APIs from CoinGecko to fetch real-time data.
 
-## Available Scripts
+# purpose
 
-In the project directory, you can run:
+The purpose of CryptoHub is to deliver a seamless and user-friendly interface for users to explore and track cryptocurrency exchanges, cryptocurrencies, and NFTs. With a focus on providing real-time data and interactive features, CryptoHub aims to be a one-stop platform for crypto enthusiasts and investors.
 
-### `npm start`
+# Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+\*HTML
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+\*Chakra-UI-Design
 
-### `npm test`
+\*ReactJS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+\*CoinGecko API
 
-### `npm run build`
+# Functionality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CryptoHub features three main sections:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.Crypto Exchange Platform:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> > Detailed information about various cryptocurrency exchanges.
+> > Data includes trading volumes, number of coins supported, and fee structures.
+> > Search functionality to find exchanges by name or URL.
+> > Pagination for easy navigation through exchanges.
 
-### `npm run eject`
+2.Cryptocurrency Information (Hot Section):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> > Detailed information on various cryptocurrencies including:
+> > Interactive graphs showing valuation over time with various date and time ranges.
+> > Current value, highest and lowest prices, market cap, and all-time high/low statistics.
+> > Rate of increase and decrease for each coin.
+> > Pricing information available in INR, USD, and EUR.
+> > Search functionality to find coins by name.
+> > Pagination for easy navigation through the list of cryptocurrencies.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.NFT Section:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> > Comprehensive details about NFTs including prices, ownership history, and related statistics.
+> > Pagination for easy navigation through NFTs.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
+Install CryptoHub with npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npx create-react-app crypto-app
+  npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Integration
 
-### Code Splitting
+> > CryptoHub utilizes the CoinGecko API to fetch real-time data for cryptocurrencies and exchanges. Ensure you have an active internet connection to receive updated information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Footer Section
 
-### Analyzing the Bundle Size
+In the footer section, you will find:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Links to my NFTs on OpenSea.
+Additional footer information and useful links.
 
-### Making a Progressive Web App
+## My NFTs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Check out my personal NFT collection on OpenSea: https://opensea.io/Art0n_nft
 
-### Advanced Configuration
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+\*Home page:
 
-### Deployment
+![home1](https://github.com/krushang-07/Crypto-App/assets/153190903/4289d5de-c584-4675-8e3f-8686901e7cb4)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+\*Two section detail(exchange & coins):
 
-### `npm run build` fails to minify
+![home2](https://github.com/krushang-07/Crypto-App/assets/153190903/91e2ab5b-1184-4284-946b-bc22ea5e729e)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+\*NFT & Footer section:
+
+![Screenshot 2024-05-29 210607](https://github.com/krushang-07/Crypto-App/assets/153190903/76835ce9-ad05-4ae5-84b0-c7c79a71c441)
+
+\*My NFT Collection on OpenSea:
+
+![Screenshot 2024-05-29 210652](https://github.com/krushang-07/Crypto-App/assets/153190903/56fda890-64f4-4013-ad73-558161abdb1a)
+
+\*Coin exchange platform section:
+
+![exchange](https://github.com/krushang-07/Crypto-App/assets/153190903/8ce64504-4916-44a8-a604-0ed0e4bd9b0e)
+
+\*On click coinbase site:
+
+![CB](https://github.com/krushang-07/Crypto-App/assets/153190903/259aede0-c801-46ee-9ffb-fd0357c3ae42)
+
+\*Crypto Coin section:
+
+![cc](https://github.com/krushang-07/Crypto-App/assets/153190903/5ea5b828-f4d1-45cf-afb6-89d5bf9f2fad)
+
+\*Pagination of coin section:
+
+![pg](https://github.com/krushang-07/Crypto-App/assets/153190903/c663da4c-986b-449b-ae91-5e3163787af7)
+
+\*Price and Date Graph of Coin:
+
+![p&d](https://github.com/krushang-07/Crypto-App/assets/153190903/af4924f6-8298-429f-a281-c837ffb47077)
+
+\*Other Detail of Coins:
+
+![oc](https://github.com/krushang-07/Crypto-App/assets/153190903/39b64de4-8d13-4fe0-a019-201a4a2b0a09)
+
+\*NFT section:
+
+![nft](https://github.com/krushang-07/Crypto-App/assets/153190903/0f6a5170-83eb-4a3a-9611-e4eb079c2f7a)
+
+\*Mobile responsive:
+
+![mr0](https://github.com/krushang-07/Crypto-App/assets/153190903/59870107-52c9-4ada-b3cb-b381c26922bb)
+![mr](https://github.com/krushang-07/Crypto-App/assets/153190903/fed34376-2117-4a39-a899-87db7ae2dabc)
+
+## Run Locally
+
+Clone the project
+
+````bash
+  git clone https://github.com/krushang-07/Crypto-App.git
+
+Go to the project directory
+
+```bash
+  cd crypto-app
+````
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
