@@ -8,13 +8,13 @@ The purpose of CryptoHub is to deliver a seamless and user-friendly interface fo
 
 # Technologies Used
 
-\*HTML
+> > HTML
 
-\*Chakra-UI-Design
+> > Chakra-UI-Design
 
-\*ReactJS
+> > ReactJS
 
-\*CoinGecko API
+> > CoinGecko API
 
 # Functionality
 
